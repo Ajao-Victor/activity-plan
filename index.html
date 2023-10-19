@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME PAGE</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+    }
+</style>
+<body style="background-image: url(./cover\ \(6\).png);background-repeat: no-repeat;background-size: cover;">
+    <div style="width: 100%;height:100vh;display: flex;justify-content: center;align-items: center;border: 1px solid black;">
+        <div style="width: 50%;height: 150px;border: 5px solid black;display: flex;justify-content: center;align-items: center;border-radius: 15px;"> 
+            <div style="height:100%;display: flex;flex-direction: column;justify-content: space-around;">
+                <strong>WELCOME USER!</strong>
+                <button style="border: 3px solid white;padding: 3px 3px 3px 3px;border-radius: 5px;background: transparent;color: white;font-size: 15px;" onclick="visit()">VISIT ACTIVITIES</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function visit() {
+            window.location.assign("toDo.html")
+        }
+    </script>
+</body>
+</html>

@@ -98,40 +98,6 @@
             localStorage.removeItem("db")
             localStorage.setItem("db2",JSON.stringify(allTodos))
             // console.log(splic);
-
-            
-            document.getElementById("t-body").innerHTML = ""
-            gottendb.map((each,index) => {
-
-            let tableBody = document.getElementById("t-body")
-           let row = document.createElement("tr");
-
-           let titleCell = document.createElement("td");
-           titleCell.textContent = each.title;
-           titleCell.style.textAlign = "center"
-           titleCell.style.backgroundColor = "pink"
-           row.appendChild(titleCell);
-
-           let detailsCell = document.createElement("td");
-           detailsCell.textContent = each.details;
-           detailsCell.style.textAlign = "center"
-           detailsCell.style.backgroundColor = "darkgrey"
-           row.appendChild(detailsCell);
-
-           let dateCell = document.createElement("td");
-           dateCell.textContent = each.date;
-           dateCell.style.textAlign = "center"
-           dateCell.style.backgroundColor = "pink"
-           row.appendChild(dateCell);
-
-           let timeCell = document.createElement("td");
-           timeCell.textContent = each.time;
-           timeCell.style.textAlign = "center"
-           timeCell.style.backgroundColor = "darkgrey"
-           row.appendChild(timeCell);
-
-           tableBody.appendChild(row)
-            })
             tab()
             todoTitle.value =""
                  todoDetails.value = ""
@@ -216,10 +182,10 @@
                 err.innerHTML = ""
                 let gottendb = JSON.parse(localStorage.getItem("db"))
                 let gottendb2 = JSON.parse(localStorage.getItem("db2"))
-                localStorage.clear("db")
-                localStorage.clear("db2")
+                localStorage.removeItem("db")
+                localStorage.removeItem("db2")
                 gottendb = JSON.parse(localStorage.getItem("db"))
-                localStorage.clear("db")
+                localStorage.removeItem("db")
                 document.getElementById("t-body").innerHTML = ""
                 let n = allTodos.length
             allTodos.splice(0,n)
